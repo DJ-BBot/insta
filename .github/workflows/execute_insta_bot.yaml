@@ -24,9 +24,9 @@ jobs:
       
       - name: Install Python dependencies
         run: |
-          sudo apt-get install python-pyaudio python3-pyaudio portaudio19-dev
-          python3 -m pip install discord.py
-          python3 -m pip install pyaudio
+          sudo apt-get update
+          sudo apt-get install portaudio19-dev
+          python3 -m pip install discord.py pyaudio
 
       - name: Execute insta-bot
         env:
