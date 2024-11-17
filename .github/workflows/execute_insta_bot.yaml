@@ -29,5 +29,5 @@ jobs:
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
-          py src/insta.py
+          python src/insta.py
       
