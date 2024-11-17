@@ -38,5 +38,5 @@ try:
     signal.alarm(10) # run for 6 hours, less 20 seconds.
     bot.run(bot_token=get_bot_token())
 except Exception as e:
-    bot.error(str(e))
+    print(str(e))
     sys.exit(1) # execution failed
