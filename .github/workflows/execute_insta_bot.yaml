@@ -1,4 +1,4 @@
-I name: Run Insta-Bot
+name: Run Insta-Bot
 
 on:
   workflow_dispatch:
