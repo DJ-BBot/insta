@@ -32,7 +32,7 @@ jobs:
 
       - name: Execute insta-bot
         run: |
-          BOT_TOKEN=${{ secrets.BOT_TOKEN }}
+          BOT_TOKEN="${{ secrets.BOT_TOKEN }}"
           if [[ -n "${BOT_TOKEN}" ]]; then
             python3 src/insta.py
           fi
