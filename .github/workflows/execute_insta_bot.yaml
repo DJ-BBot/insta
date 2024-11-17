@@ -11,24 +11,23 @@ defaults:
 
 jobs:
   insta:
-
-  runs-on: ubuntu-latest
-  
-  steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
     
-    - name: Setup python
-      uses: actions/setup-python@v4
-      with: 
-        python-version: "3.13"
-    
-    - name: Install discord.py
-      run: python -m pip install discord.py
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: "3.13"
+      
+      - name: Install discord.py
+        run: python -m pip install discord.py
 
-    - name: Execute insta-bot
-      env:
-        - BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-      run: |
-        py src/insta.py
+      - name: Execute insta-bot
+        env:
+          - BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          py src/insta.py
       
