@@ -1,4 +1,4 @@
-name: Run Insta-Bot
+I name: Run Insta-Bot
 
 on:
   schedule:
@@ -31,9 +31,10 @@ jobs:
           python3 -m pip install discord.py[voice]
 
       - name: Execute insta-bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
-          BOT_TOKEN="${{ secrets.BOT_TOKEN }}"
-          if [[ -n "${BOT_TOKEN}" ]]; then
+          if [[ -n "$BOT_TOKEN" ]]; then
             python3 src/insta.py
           fi
       
