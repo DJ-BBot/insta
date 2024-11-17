@@ -33,5 +33,8 @@ jobs:
       - name: Execute insta-bot
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: python3 src/insta.py
+        run: |
+          if [[ -n "${BOT_TOKEN}" ]]; then
+            python3 src/insta.py
+          fi
       
