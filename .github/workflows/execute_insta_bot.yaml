@@ -27,7 +27,7 @@ jobs:
 
       - name: Execute insta-bot
         env:
-          - BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           py src/insta.py
       
