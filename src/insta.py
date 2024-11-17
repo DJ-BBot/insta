@@ -26,6 +26,7 @@ def get_bot_token() -> str:
     bot_token = os.environ.get(env_name) if env_name in os.environ.keys() else ""
     if bot_token == "":
         raise RuntimeError("BOT_TOKEN not present in environment variables")
+    return bot_token
 
 def handler(signum, frame):
     print("Finished executing for all time!")
