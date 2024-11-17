@@ -35,8 +35,8 @@ def handler(signum, frame):
 # Run the bot
 try:
     signal.signal(signal.SIGALRM, handler)
-    #signal.alarm(21_580) # run for 6 hours, less 20 seconds.
-    signal.alarm(10) # run for 6 hours, less 20 seconds.
+    signal.alarm(21_500) # run for 6 hours, less 20 seconds.
+    #signal.alarm(10) # run for 6 hours, less 20 seconds.
     bot.run(get_bot_token())
 except Exception as e:
     print(str(e))
