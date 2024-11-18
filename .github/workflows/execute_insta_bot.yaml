@@ -1,8 +1,6 @@
 name: Run Insta-Bot
 
 on:
-  schedule:
-    - cron: '* */6 * * *'
   workflow_dispatch:
 
 defaults:
